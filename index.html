@@ -12,13 +12,41 @@
     <title>Parrot Memory Game</title>
 </head>
 
-<body>
+<body class="body">
     <header>
         <h1>Parrot Card Game</h1>
-        <button onclick="shuffleCards(14)">teste</button>
     </header>
 
     <main>
+        <div class="game-style show">
+            <div class="section n-players">
+                <div class="title">Quantidade de Cartas</div>
+                <div class="options">
+                    <button onclick="selectCardNumbers(this)">6</button>
+                    <button onclick="selectCardNumbers(this)">8</button>
+                    <button onclick="selectCardNumbers(this)">10</button>
+                    <button onclick="selectCardNumbers(this)">12</button>
+                    <button onclick="selectCardNumbers(this)">14</button>
+                    <button onclick="selectCardNumbers(this)">16</button>
+                    <button onclick="selectCardNumbers(this)">18</button>
+                    <button onclick="selectCardNumbers(this)">20</button>
+                    <button onclick="selectCardNumbers(this)">22</button>
+                    <button onclick="selectCardNumbers(this)">24</button>
+                </div>
+            </div>
+            <div class="section game-type">
+                <div class="title">Tipo de jogo</div>
+                <div class="options">
+                    <button disabled class="selected" onclick="selectGameType(this)" >Witcher</button>
+                </div>
+            </div>
+            <div class="section">
+                <div class="options">
+                    <button disabled class="next disabled-button" id ="disabled-button" onclick="shuffleCards(6)">Continuar</button>
+                </div>
+            </div>
+        </div>
+
         <div class="container" onclick="selectCard(this)">
             <div class="image-front card">
             </div>
@@ -71,6 +99,56 @@
         </div>
         <div class="container" onclick="selectCard(this)">
             <div class="image-front card">
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
+            </div>
+            <div class="image-back card"></div>
+        </div>
+        <div class="container" onclick="selectCard(this)">
+            <div class="image-front card">          
             </div>
             <div class="image-back card"></div>
         </div>
