@@ -5,7 +5,7 @@
     font-weight: 400;
 }
 
-.body {
+.body-witcher {
     --title: #310A0B;
     --buttonSelected: #310A0B;
     --fontButton: black;
@@ -15,6 +15,18 @@
     --cardColor: #221F1A;
     --container: rgba(156, 141, 141,0.5);
     --button: rgba(34, 31, 26, 0.25);
+}
+
+.body-wow {
+    --title: #9B7052;
+    --buttonSelected: #8A4520;
+    --fontButton: #130E13;
+    --font: #130E13;
+    --cardBoarder: #9B7052;
+    --background: rgba(222, 138 ,92, 0.2);
+    --cardColor: #130E13;
+    --container: rgba(53, 35, 21, 0.5);
+    --button: rgba(223, 206, 111, 0.25);
 }
 
 body {
@@ -117,6 +129,11 @@ main {
     color: var(--background);
 }
 
+.body-wow button.selected, .body-wow .options .next {
+    background-color: var(--buttonSelected);
+    color: var(--font);
+}
+
 .disabled-button {
     opacity: 0.25;
     cursor:default;
@@ -170,10 +187,19 @@ main {
     transform: rotateY(180deg);
 }
 
+.body-witcher .image-back {
+    background-image: url(https://archive.org/download/GOGTheWitcher3WildHunt/%5B7%5D%20Extras/Profile%20Avatars/Witcher%203%20Wild%20Hunt%2C%20The%20-%20avatar%2018.jpg);
+}
+
+.body-wow .image-back {
+    background-image: url(https://static.wikia.nocookie.net/wowwiki/images/1/10/Earthwarder.png);
+    opacity: 0.9;
+    background-size: cover;
+}
+
 .image-back {
     height: 100%;
     width: 100%;
-    background-image: url(assets/Witcher3.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -238,3 +264,4 @@ main {
         gap: 10px;
     }
 }
+
