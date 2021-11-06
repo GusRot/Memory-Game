@@ -39,11 +39,18 @@ body {
 header {
     padding-top: 30px;
     padding-bottom: 30px;
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
+}
+
+.timer {
+    position: absolute;
+    right: 10px;
+    display: none;
 }
 
 header h1 {
@@ -52,6 +59,24 @@ header h1 {
     font-size: 56px;
     letter-spacing: -0.4%;
     font-weight: 700;
+}
+
+.finish {
+    margin: 0 auto 40px auto;
+    padding: 2px;
+    border: 1px solid var(--cardBoarder);
+    cursor: pointer;
+    background-color: var(--background);
+    color: var(--title);
+    font-size: 14px;
+    border-radius: 4px;
+    align-items: center;
+    opacity: 0.7;
+    display: none;
+}
+
+.finish:hover {
+    opacity: 1;
 }
 
 main {
@@ -99,7 +124,7 @@ main {
     width: 100%;
 }
 
-.n-players .options {
+.n-cards .options {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 5px;
@@ -108,7 +133,7 @@ main {
     align-items: center;
 }
 
-.n-players .options button {
+.n-cards .options button {
     width: 15%;
     margin: 0 2px;
 }
@@ -153,6 +178,10 @@ main {
 }
 
 .show {
+    display: flex;
+}
+
+.show2 {
     display: flex;
 }
 
@@ -222,7 +251,6 @@ main {
 }
 
 @media (max-width:1200px) {
-
     body {
         width: 100%;
     }
@@ -245,11 +273,9 @@ main {
     .container:hover {
         transform: translateY(-2px);
     }
-
 }
 
 @media (max-width:650px) {
-
     header h1 {
         font-size: 36px;
         letter-spacing: -0.15%;
