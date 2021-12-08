@@ -1,30 +1,30 @@
 * {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
 
 .body-witcher {
-    --title: #310A0B;
-    --buttonSelected: #310A0B;
+    --title: #310a0b;
+    --buttonSelected: #310a0b;
     --fontButton: black;
-    --font:black;
+    --font: black;
     --cardBoarder: black;
-    --background: #EAEAEA;
-    --cardColor: #221F1A;
-    --container: rgba(156, 141, 141,0.5);
+    --background: #eaeaea;
+    --cardColor: #221f1a;
+    --container: rgba(156, 141, 141, 0.5);
     --button: rgba(34, 31, 26, 0.25);
 }
 
 .body-wow {
-    --title: #9B7052;
-    --buttonSelected: #8A4520;
-    --fontButton: #130E13;
-    --font: #130E13;
-    --cardBoarder: #9B7052;
-    --background: rgba(222, 138 ,92, 0.2);
-    --cardColor: #130E13;
+    --title: #9b7052;
+    --buttonSelected: #8a4520;
+    --fontButton: #130e13;
+    --font: #130e13;
+    --cardBoarder: #9b7052;
+    --background: rgba(222, 138, 92, 0.2);
+    --cardColor: #130e13;
     --container: rgba(53, 35, 21, 0.5);
     --button: rgba(223, 206, 111, 0.25);
 }
@@ -90,6 +90,17 @@ main {
     width: 100%;
 }
 
+#root {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .game-style {
     background-color: var(--container);
     padding: 20px;
@@ -98,7 +109,7 @@ main {
     max-width: 600px;
     display: none;
     flex-direction: column;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .section {
@@ -149,19 +160,21 @@ main {
     color: var(--fontButton);
 }
 
- button.selected, .options .next {
+button.selected,
+.options .next {
     background-color: var(--buttonSelected);
     color: var(--background);
 }
 
-.body-wow button.selected, .body-wow .options .next {
+.body-wow button.selected,
+.body-wow .options .next {
     background-color: var(--buttonSelected);
     color: var(--font);
 }
 
 .disabled-button {
     opacity: 0.25;
-    cursor:default;
+    cursor: default;
 }
 
 .container {
@@ -195,7 +208,7 @@ main {
 }
 
 .card {
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--cardBoarder);
     transform-style: preserve-3d;
     background-color: var(--cardColor);
@@ -207,7 +220,7 @@ main {
     justify-content: center;
     position: absolute;
     backface-visibility: hidden;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .image-front {
@@ -242,15 +255,17 @@ main {
     object-fit: cover;
 }
 
-.marked .image-front, .sucess .image-front {
+.marked .image-front,
+.sucess .image-front {
     transform: rotateY(0deg);
 }
 
-.marked .image-back, .sucess .image-back  {
+.marked .image-back,
+.sucess .image-back {
     transform: rotateY(-180deg);
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
     body {
         width: 100%;
     }
@@ -275,7 +290,7 @@ main {
     }
 }
 
-@media (max-width:650px) {
+@media (max-width: 650px) {
     header h1 {
         font-size: 36px;
         letter-spacing: -0.15%;
@@ -290,4 +305,3 @@ main {
         gap: 10px;
     }
 }
-

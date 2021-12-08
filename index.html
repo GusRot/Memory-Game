@@ -1,176 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Memory Game</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Memory Game</title>
+    </head>
 
-<body class="body-witcher">
-    <header>
-        <h1 id="game-name">Memory Game</h1> 
-        <p class="timer">contador</p>
-    </header>
-    <button class="finish" onclick="finishGame()">Terminar Jogo</button>
-    <main>
-        <div class="game-style show">
-            <div class="section n-cards">
-                <div class="title">Quantidade de Cartas</div>
-                <div class="options">
-                    <button onclick="selectCardNumbers(this)">6</button>
-                    <button onclick="selectCardNumbers(this)">8</button>
-                    <button onclick="selectCardNumbers(this)">10</button>
-                    <button onclick="selectCardNumbers(this)">12</button>
-                    <button onclick="selectCardNumbers(this)">14</button>
-                    <button onclick="selectCardNumbers(this)">16</button>
-                    <button onclick="selectCardNumbers(this)">18</button>
-                    <button onclick="selectCardNumbers(this)">20</button>
-                    <button onclick="selectCardNumbers(this)">22</button>
-                    <button onclick="selectCardNumbers(this)">24</button>
+    <body class="body-witcher">
+        <header>
+            <h1 id="game-name">Memory Game</h1>
+            <p class="timer">contador</p>
+        </header>
+        <button class="finish" onclick="finishGame()">Terminar Jogo</button>
+        <main>
+            <div class="game-style show">
+                <div class="section n-cards">
+                    <div class="title">Quantidade de Cartas</div>
+                    <div class="options">
+                        <button onclick="selectCardNumbers(this)">6</button>
+                        <button onclick="selectCardNumbers(this)">8</button>
+                        <button onclick="selectCardNumbers(this)">10</button>
+                        <button onclick="selectCardNumbers(this)">12</button>
+                        <button onclick="selectCardNumbers(this)">14</button>
+                        <button onclick="selectCardNumbers(this)">16</button>
+                        <button onclick="selectCardNumbers(this)">18</button>
+                        <button onclick="selectCardNumbers(this)">20</button>
+                        <button onclick="selectCardNumbers(this)">22</button>
+                        <button onclick="selectCardNumbers(this)">24</button>
+                    </div>
+                </div>
+                <div class="section game-type">
+                    <div class="title">Tipo de jogo</div>
+                    <div class="options">
+                        <button
+                            id="witcher"
+                            class="selected"
+                            onclick="selectGameType(this)"
+                        >
+                            Witcher
+                        </button>
+                        <button id="wow" onclick="selectGameType(this)">
+                            WoW Dragons
+                        </button>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="options">
+                        <button
+                            disabled
+                            class="next disabled-button"
+                            id="disabled-button"
+                            onclick="shuffleCards(6)"
+                        >
+                            Continuar
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="section game-type">
-                <div class="title">Tipo de jogo</div>
-                <div class="options">
-                    <button class="selected" onclick="selectGameType(this)">Witcher</button>
-                    <button onclick="selectGameType(this)">WoW Dragons</button>
-                </div>
-            </div>
-            <div class="section">
-                <div class="options">
-                    <button disabled class="next disabled-button" id ="disabled-button" onclick="shuffleCards(6)">Continuar</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">         
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-        <div class="container" onclick="selectCard(this)">
-            <div class="image-front card">          
-            </div>
-            <div class="image-back card"></div>
-        </div>
-    
-    </main>
-    <script src="script.js"></script>
-</body>
+            <div id="root"></div>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
