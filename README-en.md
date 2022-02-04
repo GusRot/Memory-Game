@@ -1,5 +1,5 @@
 # Memory-Game
-###  Versions of README [English](./README-en.md)  
+###  Versão README [Português](./README.md)  
 <div style="display: flex; gap:1rem;">
 <a href="#">
 <img alt="Repository size" src="https://img.shields.io/github/repo-size/GusRot/Memory-Game">
@@ -12,11 +12,11 @@
 </a>
 </div>
 
-Um jogo da memória desenvolvido apenas com HTML, CSS e Javascript para você se divertir e aprimorar e exercitar o seu cérebro
+A memory game developed only with HTML, CSS and Javascript for you to have fun, improve and exercise your brain
 
-Feito para os viciados em jogos terem a possibilidade de seleção de dois temas diferentes: Witcher / World of Warcraft (WoW)
+Made for game addicts to have the possibility to select from two different themes: Witcher / World of Warcraft (WoW)
 
-[Acesse aqui](https://gusrot.github.io/Memory-Game/)
+[Access here](https://gusrot.github.io/Memory-Game/)
 
 ## Video Preview (Youtube)
 
